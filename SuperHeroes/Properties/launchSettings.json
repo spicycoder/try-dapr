@@ -4,17 +4,17 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:24793",
-      "sslPort": 44320
+      "applicationUrl": "http://localhost:14203",
+      "sslPort": 44398
     }
   },
   "profiles": {
-    "WeatherApi": {
+    "SuperHeroes": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:1901;http://localhost:1902",
+      "applicationUrl": "http://localhost:1901",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
