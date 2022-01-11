@@ -1,0 +1,16 @@
+name: trydapr
+extensions:
+  - name: dapr
+    log-level: debug
+    components-path: "./components/"
+services:
+  - name: super-heroes
+    project: SuperHeroes/SuperHeroes.csproj
+    bindings:
+      - port: 1901
+        protocol: http
+  - name: contacts-provider
+    project: ContactsProvider/ContactsProvider.csproj
+    bindings:
+      - port: 1801
+        protocol: http
