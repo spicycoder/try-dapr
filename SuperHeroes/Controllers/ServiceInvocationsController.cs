@@ -18,7 +18,8 @@ namespace SuperHeroes.Controllers
         [HttpGet("[action]"), ActionName("contact")]
         public async Task<ActionResult<ContactInformation>> GetContact([FromQuery] string name)
         {
-            var contact = await _daprClient.InvokeMethodAsync<string, ContactInformation>(HttpMethod.Get,  "contacts-provider", "Contacts/by-name", name);
+            var httpClient = DaprClient.CreateInvokeHttpClient("contacts-provider");
+            var contact = await httpClient.GetFromJsonAsync<ContactInformation>($"/Contacts/by-name?name={name}");
 
             if (contact != null)
             {
